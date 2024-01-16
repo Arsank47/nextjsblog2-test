@@ -21,7 +21,7 @@ export default function RootLayout({
         <Link href="/">
           <h1 className="text-2xl text-white font-bold mt-4">Arsan Khan's ePortfolio</h1>
         </Link>
-        <p className="text-slate-300">🤟 Welcome to my ePortfolio. 💻</p>
+        <p className="text-slate-300">🤟 Thank you for exploring my projects! 💻</p>
       </div>
     </header>
   );
