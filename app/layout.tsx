@@ -11,13 +11,13 @@ export default function RootLayout({
     <header >
       {/* <div className="text-center bg-slate-800 p-8 my-6 rounded-md"> */}
       <div className="text-center bg-indigo-600 p-8 my-6 rounded-md">
-        <Image
+        {/* <Image
           src="/logo.png"
           width={40}
           height={40}
           className="mx-auto"
           alt={"logo"}
-        />
+        /> */}
         <Link href="/">
           <h1 className="text-2xl text-white font-bold mt-4">Arsan Khan's ePortfolio</h1>
         </Link>
