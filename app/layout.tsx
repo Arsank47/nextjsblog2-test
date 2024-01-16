@@ -19,7 +19,8 @@ export default function RootLayout({
           alt={"logo"}
         /> */}
         <Link href="/">
-          <h1 className="text-2xl text-white font-bold mt-4">Arsan Khan's ePortfolio</h1>
+        <h1 className="text-2xl text-white font-bold mt-4">Arsan Khans&apos; ePortfolio</h1>
+
         </Link>
         <p className="text-slate-300">🤟 Thank you for exploring my projects! 💻</p>
       </div>
