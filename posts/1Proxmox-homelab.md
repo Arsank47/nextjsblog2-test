@@ -8,7 +8,7 @@ date: "03-11-2020"
 The idea behind this project was to use this opportunity to understand more about networking and the Linux ecosystem. This hands-on experience allowed me to delve deeper into the intricacies of networking protocols, security measures, and system administration within the Linux environment.
 
 
-As I researched the best way to transform my spare computer into a home server, I discovered Proxmox VE, a type 2 hypervisor.
+As I researched the best way to transform my spare computer into a home server, I discovered Proxmox VE, a type 1 hypervisor.
 This is a comprehensible solution for all IT enthusiasts, as it is renowned for its robust capabilities. Proxmox empowers users to efficiently manage and deploy virtual machines (VMs) and containers, making it an ideal choice for various home server applications. Its versatility allows for the creation of VMs tailored to specific purposes, such as hosting websites, managing backups, or running diverse applications.
 
 
