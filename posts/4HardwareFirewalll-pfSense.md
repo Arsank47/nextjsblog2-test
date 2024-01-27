@@ -17,6 +17,11 @@ ONce I had finished building the system, and installing Proxmox VE onto it, I th
 
 This is important, as a device like a firewall must be able to differentiate the input of data from the ISP & the local network otherwise it will not be able to understand where the data is coming from. It needs to be able to control the flow of internal and external packets of data, and this would not be possible with one link.
 
+Once I created the Linux bridge, i was then able to boot up the virtual machine and perform the standard steps of setting up the Proxmox virtual machine, following all the relevant steps in the official documentation. I was then able to load up the pfSense web dashboard and log in using the credentials that I had created doing the installation.
+
+
+
+
 ![images/5RPi3-top-down-view.png](/images/5RPi3-top-down-view.png)
 
 
@@ -42,9 +47,11 @@ This is important, as a device like a firewall must be able to differentiate the
  
 
 <small>Sources:
-- 1. https://pts-project.org/
-- 2. https://www.raspberrypi.org/
-- 3. https://www.portainer.io/
+- 1. https://www.snort.org/
+- 2. https://www.pfsense.org/
+- 3. https://www.proxmox.com/en/proxmox-virtual-environment/overview
+  4. https://docs.netgate.com/pfsense/en/latest/recipes/virtualize-proxmox-ve.html
+  5. https://openvpn.net/
 
 
 
