@@ -5,7 +5,11 @@ subtitle: "Installing pfSense to add an additonal layer of protection to my home
 date: "19-01-2022"
 ---
 
-The objective of this project was to create a compact and covert pen-testing tool capable of both identifying vulnerabilities and safeguarding networks from unseen threats. This was achieved through the development of a Raspberry Pi-based remote IoT pentesting platform, utilising a Raspberry Pi 3 Model B+ in conjunction with the powerful tools of PiRogue OS, Suricata, and Grafana.
+The motivation behind this project stemmed from my Cyber Security degree, when learning about protecting networks and infrastrucuture from cyber-attacks. Of course the average home network is not the same as an enterprise network, however gaining an understanding and setting up a starting point felt like a great project to undertake at the time.
+
+I decided to use Proxmox again to virtualise my pfsense hardware router/firewall, because of the additonal benefits that virtualisation brings such as the ability to provision multiple services/applications under one machine, save on floor space & electricity bills as opposed to having a dedicated machine for each intended service, as this is not feasible at all.
+
+I needed to purchase a whole new server, because my main homeserver will not have the remaining resources and also needs another Ethernet Nic for it to be considered for this project. Therefore, I did some research and decided to purchase some parts and build a second homeserver to act as a hardware firewall, and also be used for other projects in the future.
 
 ![images/5RPi-in-action-with-router.png](/images/5RPi-in-action-with-router.png)
 
