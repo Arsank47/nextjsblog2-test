@@ -19,7 +19,7 @@ This is important, as a device like a firewall must be able to differentiate the
 
 Once I created the Linux bridge, i was then able to boot up the virtual machine and perform the standard steps of setting up the Proxmox virtual machine, following all the relevant steps in the official documentation. I was then able to load up the pfSense web dashboard and log in using the credentials that I had created doing the installation.
 
-
+I then decided to checkout the plugins tab, I then noticed that it was possible to install Snort an open-source IDS/IPS. Similarly I was able to install OpenVPN, and create my own VPN that allows me to connect to the network from anywhere, if needed to access any of my VMs at all.
 
 
 ![images/5RPi3-top-down-view.png](/images/5RPi3-top-down-view.png)
