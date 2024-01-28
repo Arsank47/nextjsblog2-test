@@ -5,34 +5,32 @@ subtitle: "Installing pfSense to add an additonal layer of protection to my home
 date: "19-01-2022"
 ---
 
-The motivation behind this project stemmed from my Cyber Security degree, when learning about protecting networks and infrastrucuture from cyber-attacks. Of course the average home network is not the same as an enterprise network, however gaining an understanding and setting up a starting point felt like a great project to undertake at the time.
+The motivation behind this project stemmed from my Cyber Security degree, where I delved into the realm of safeguarding networks and infrastructure against cyber threats. While a home network differs from an enterprise setup, the endeavour aimed to comprehend and establish a foundational point for such security measures.
 
-I decided to use Proxmox again to virtualise my pfsense hardware router/firewall, because of the additonal benefits that virtualisation brings such as the ability to provision multiple services/applications under one machine, save on floor space & electricity bills as opposed to having a dedicated machine for each intended service, as this is not feasible at all.
+Opting for Proxmox once again, I virtualised my pfsense hardware router/firewall. Virtualisation presented additional benefits, such as consolidating various services/applications onto a single machine, economising on floor space, and reducing electricity consumption compared to maintaining dedicated machines for each service.
 
-I needed to purchase a whole new server, because my main homeserver will not have the remaining resources and also needs another Ethernet Nic for it to be considered for this project. Therefore, I did some research and decided to purchase some parts and build a second homeserver to act as a hardware firewall, and also be used for other projects in the future.
+For this venture, I procured components to build a second home server dedicated to acting as a hardware firewall. After assembling the system and installing Proxmox VE, I deployed pFSense, ensuring that Proxmox recognised both network adapters—LAN and WAN. These adapters managed the flow of internet traffic from the ISP to the local network and connected devices, a critical aspect for a firewall to distinguish between external and internal data packets.
 
-![images/5RPi-in-action-with-router.png](/images/5RPi-in-action-with-router.png)
+![images/4pfSenseProxmoxLinuxBridge.png](/images/4pfSenseProxmoxLinuxBridge.png)
 
-ONce I had finished building the system, and installing Proxmox VE onto it, I then also installed pFSense which was a simple task. However the main task was to ensure the Proxmox server was able to see all of the network adapters, in this case I had two Ethernet network adapters, that would operate as the LAN & WAN on the system. This can be understood as one Ethernet cable being responsible from receiving the internet from the ISP, and the other Ethernet cable being responsible from transfering the internet and data to the local network and all connected devices.
+Following the creation of the Linux bridge, I initiated the virtual machine, configured it according to Proxmox guidelines, and accessed the pfSense web dashboard. Exploring the plugins tab, I discovered the option to install Snort, an open-source IDS/IPS, enhancing the security posture.
 
-This is important, as a device like a firewall must be able to differentiate the input of data from the ISP & the local network otherwise it will not be able to understand where the data is coming from. It needs to be able to control the flow of internal and external packets of data, and this would not be possible with one link.
-
-Once I created the Linux bridge, i was then able to boot up the virtual machine and perform the standard steps of setting up the Proxmox virtual machine, following all the relevant steps in the official documentation. I was then able to load up the pfSense web dashboard and log in using the credentials that I had created doing the installation.
-
-I then decided to checkout the plugins tab, I then noticed that it was possible to install Snort an open-source IDS/IPS. Similarly I was able to install OpenVPN, and create my own VPN that allows me to connect to the network from anywhere, if needed to access any of my VMs at all.
+![images/4pfSenseInstallation.png](/images/4pfSenseInstallation.png)
 
 
-![images/5RPi3-top-down-view.png](/images/5RPi3-top-down-view.png)
+Additionally, I utilised the OpenVPN plugin, establishing a VPN that allows remote network access for managing VMs from anywhere. This comprehensive integration was followed by meticulous configuration of rules tailored to the network's security requirements. 
 
+![images/4pfSenseSnort.png](/images/4pfSenseSnort.png)
 
+The configured rules aimed at enhancing Snort's ability to detect and respond to potential security threats. Subsequent testing involved simulating a scenario where malicious traffic was generated within the network. Snort promptly identified and flagged the simulated threat, highlighting its efficacy in detecting and responding to security incidents.
 
-
-
-![images/5RPi3-Grafana-overview-full.png](/images/5RPi3-Grafana-overview-full.png)
+In conclusion, this project serves as a testament to the amalgamation of theoretical knowledge garnered from my Cyber Security degree with practical application in fortifying home network security. By opting for Proxmox, the virtualisation of the pfsense hardware router/firewall not only optimised resource utilisation but also streamlined the management of diverse services on a singular, energy-efficient platform. The incorporation of a dedicated home server as a hardware firewall further exemplifies the commitment to robust cybersecurity practices. The successful deployment of pFSense, coupled with the seamless integration of Snort and OpenVPN plugins, underscores the project's effectiveness in bolstering network defences. Through meticulous rule configuration, Snort demonstrated its proficiency in swiftly identifying and responding to potential security threats, validating the comprehensive security posture achieved in this endeavour.
 
 
 
-![images/5pirogue-ctl-status.png](/images/5pirogue-ctl-status.png)
+
+
+
 
 
 
